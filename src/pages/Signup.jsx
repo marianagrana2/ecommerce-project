@@ -19,7 +19,7 @@ const Signup = () => {
         <input type='email' id='inputEmail' className='form-control' placeholder='email@example.com' required />
         <label htmlFor='inputPassword' className='sr-only'>Password</label>
         <input type='password' id='inputPassword' className='form-control' placeholder='Password' required />
-        <button className='btn btn-lg btn-info btn-block' type='submit'>Signup</button>
+        <button className='btn btn-lg btn-outline-primary btn-block' type='submit'>Sign up</button>
       </form>
     </div>
   )

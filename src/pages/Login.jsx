@@ -10,7 +10,7 @@ const Login = () => {
           <input type='email' id='inputEmail' className='form-control' placeholder='email@example.com' required autoFocus />
           <label htmlFor='inputPassword' className='sr-only'>Password</label>
           <input type='password' id='inputPassword' className='form-control' placeholder='Password' required />
-          <button className='btn btn-lg btn-primary btn-block' type='submit'>Login</button>
+          <button className='btn btn-lg btn-outline-primary btn-block' type='submit'>Log in</button>
         </form>
       </div>
     </>
