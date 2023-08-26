@@ -1,26 +1,41 @@
+import { useState, useEffect } from 'react' // Importarlos para poder utilizarlos para llamar a la API
 const Home = () => {
+  const [products, setProducts] = useState([]) // Donde se va almacenar los datos de la API
+  // const search = useState('')
+  useEffect(() => { // Llamada a la API
+    fetch('https://ecommerce-json-jwt.onrender.com/items')
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error(error))
+  }, [])
+
+  /* const filteredProducts = products.filter(product => {
+    return product.name.toLowerCase().includes(search.toLocalLowerCase())
+  }) */
   return (
     <>
-      <h2>Products</h2>
-      <div className='cardsContainer'>
-        <div className='card'>
-          <img className='card-img-top' alt='Card image cap' />
-          <div className='card-body'>
-            <h5 className='card-title'>Card Title</h5>
-            <p className='card-text'>Some description product right here.To have some content.</p>
-            <a href='#' className='btn btn-primary'>Add to Cart</a>
-          </div>
+      <div className='container'>
+        <h2>Products</h2>
+        <div className='row'>
+          {
+          products.map(product => ( // Mostrar Todos los Productos Disponibles
+            <div className='col-4' key={product.id}>
+              <div className='card'>
+                <div className='card-body'>
+                  <img className='card-img-top' alt={product.name} src={product.image} />
+                  <h5 className='card-title'>{product.name}</h5>
+                  <p className='card-text'>{product.description}</p>
+                  <h6 className='card-title'>{product.price}</h6>
+                  <a href='#' className='btn btn-primary'>Add to cart</a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+        </div>
 
-        </div>
-        <div className='card'>
-          <img className='card-img-top' alt='Card image cap' />
-          <div className='card-body'>
-            <h5 className='card-title'>Card Title</h5>
-            <p className='card-text'>Some description product right here.To have some content.</p>
-            <a href='#' className='btn btn-primary'>Add to Cart</a>
-          </div>
-        </div>
       </div>
+
     </>
   )
 }
