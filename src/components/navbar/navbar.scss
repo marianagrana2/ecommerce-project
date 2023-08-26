@@ -1,0 +1,57 @@
+$navbarColor:#1D3557;
+$navbarBtnColor: #1D3557;
+@mixin navbaritemLink{
+    color: $navbarColor;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    padding: 5px 30px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+
+   
+}
+.navbar{
+    background-color: #CFDFF5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.5rem 1rem;
+    margin-bottom: 20px;
+    
+    &__logo{
+        @include navbaritemLink;
+        padding: 15px;
+        font-size: 22px;
+
+    }
+    
+    &__itemLink{
+        @include navbaritemLink;
+
+        &:hover{
+            font-weight: bold;
+            border-bottom: 2px solid $navbarColor; 
+        }
+
+        &--isActive{
+            font-weight: bold;
+    
+        }
+    }
+}
+.form-inline {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    
+    .form-control{
+        margin-left: 40px;
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+}
