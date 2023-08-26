@@ -22,10 +22,10 @@ const Home = () => {
             <div className='col-4' key={product.id}>
               <div className='card'>
                 <div className='card-body'>
-                  <img className='card-img-top' alt={product.name} src={product.image} />
-                  <h5 className='card-title'>{product.name}</h5>
-                  <p className='card-text'>{product.description}</p>
-                  <h6 className='card-title'>{product.price}</h6>
+                  <img className='card-img-top' alt={`${product.product_name} image.`} src={product?.image} />
+                  <h5 className='card-title'>{product.product_name}</h5>
+                  <p className='card-text'>{product.brand}</p>
+                  <h6 className='card-title'>$ {product.price}.00</h6>
                   <a href='#' className='btn btn-primary'>Add to cart</a>
                 </div>
               </div>
