@@ -9,19 +9,26 @@ const Home = () => {
   }, [])
   return (
     <>
+      <div className='position-relative overflow-hidden'>
+        <div className='col-md-5 p-lg-5 mx-auto my-5'>
+          <h1 className='display-4 font-weight-normal'>KlickMarket</h1>
+          <p>Your new <span>favorite</span> online store.</p>
+
+        </div>
+      </div>
       <div className='container'>
         <h2>Products</h2>
         <div className='row'>
           {
           products.map(product => ( // Mostrar Todos los Productos Disponibles
             <div className='col-4' key={product.id}>
-              <div className='card'>
+              <div className='card box-shadow'>
                 <div className='card-body'>
                   <img className='card-img-top' alt={`${product.product_name} image.`} src={product?.image} />
                   <h5 className='card-title'>{product.product_name}</h5>
                   <p className='card-text'>{product.brand}</p>
                   <h6 className='card-title'>$ {product.price}.00</h6>
-                  <a href='#' className='btn btn-primary'>Add to cart</a>
+                  <a href='#' className='btn btn-outline-primary'> + Add to cart</a>
                 </div>
               </div>
             </div>

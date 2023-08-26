@@ -10,7 +10,7 @@ const NavBar = () => {
     setSearch(event.target.value)
   }
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light rounded'>
+    <nav className='navbar  sticky-top navbar-expand-lg navbar-light bg-light rounded'>
       <NavLink to='/' className='navbar__logo'>KlickMarket</NavLink>
       <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarsExample09' aria-controls='navbarsExample09' aria-expanded='true' aria-label='Toggle navigation'>
         <span className='navbar-toggler-icon' />
