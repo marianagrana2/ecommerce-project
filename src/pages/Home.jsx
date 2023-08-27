@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react' // Importarlos para poder utilizarlos para llamar a la API
+import { Link } from 'react-router-dom'
 const Home = () => {
   const [products, setProducts] = useState([]) // Donde se va almacenar los datos de la API
   useEffect(() => { // Llamada a la API
@@ -25,7 +26,7 @@ const Home = () => {
               <div className='card box-shadow'>
                 <div className='card-body'>
                   <img className='card-img-top' alt={`${product.product_name} image.`} src={product?.image} />
-                  <h5 className='card-title'>{product.product_name}</h5>
+                  <Link className='card-title' to={`/product/${product.id}`}>{product.product_name}</Link>
                   <p className='card-text'>{product.brand}</p>
                   <h6 className='card-title'>$ {product.price}.00</h6>
                   <a href='#' className='btn btn-outline-primary'> + Add to cart</a>
