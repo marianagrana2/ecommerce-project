@@ -26,7 +26,7 @@ const Home = () => {
               <div className='card box-shadow'>
                 <div className='card-body'>
                   <img className='card-img-top' alt={`${product.product_name} image.`} src={product?.image} />
-                  <Link className='card-title' to={`/product/${product.id}`}>{product.product_name}</Link>
+                  <Link className='card-link' to={`/product/${product.id}`}>{product.product_name}</Link>
                   <p className='card-text'>{product.brand}</p>
                   <h6 className='card-title'>$ {product.price}.00</h6>
                   <a href='#' className='btn btn-outline-primary'> + Add to cart</a>

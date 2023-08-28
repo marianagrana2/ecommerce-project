@@ -21,6 +21,7 @@ const ProductDetails = () => {
           </div>
           <div className='col-md-8'>
             <p className='text-secondary'>Description: {product.description}</p>
+            <a href='#' className='btn btn-outline-primary'> + Add to cart</a>
           </div>
         </div>
       </div>
