@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useAdminContext } from '../../hooks/useAdmin'
 import './navbar.scss'
 const NavBar = () => {
+  const { isAdmin, logout } = useAdminContext()
   const [search, setSearch] = useState('')
   const linkIsActive = (isActive) => {
     return isActive ? 'navbar__itemLink navbar__itemLink--isActive' : 'navbar__itemLink'
@@ -23,14 +25,18 @@ const NavBar = () => {
           <li className='nav-item'>
             <NavLink to='/login' className={({ isActive }) => linkIsActive(isActive)}>Log in</NavLink>
           </li>
-          <li className='nav-item'>
-            <NavLink to='/dashboard' className={({ isActive }) => linkIsActive(isActive)}>Dashboard</NavLink>
-          </li>
+          {
+          isAdmin &&
+            <li className='nav-item'>
+              <NavLink to='/dashboard' className={({ isActive }) => linkIsActive(isActive)}>Dashboard</NavLink>
+            </li>
+}
           <li className='nav-item'>
             <NavLink to='/signup' className={({ isActive }) => linkIsActive(isActive)}>Sign up</NavLink>
           </li>
+
           <li className='nav-item'>
-            <NavLink to='/' className={({ isActive }) => linkIsActive(isActive)}>Log out</NavLink>
+            <NavLink to='/' onClick={logout} className={({ isActive }) => linkIsActive(isActive)}>Log out</NavLink>
           </li>
         </ul>
         <form className='form-inline my-2 my-md-0'>
