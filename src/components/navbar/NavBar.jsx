@@ -34,9 +34,7 @@ const NavBar = () => {
           <input className='form-control' type='text' placeholder='Search' aria-label='Search' value={search} onChange={handleSearch} />
         </form>
       </div>
-
     </nav>
-
   )
 }
 

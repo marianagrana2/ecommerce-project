@@ -14,7 +14,6 @@ const Home = () => {
         <div className='col-md-5 p-lg-5 mx-auto my-5'>
           <h1 className='display-4 font-weight-normal'>KlickMarket</h1>
           <p>Your new <span>favorite</span> online store.</p>
-
         </div>
       </div>
       <div className='container'>
