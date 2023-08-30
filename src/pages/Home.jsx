@@ -12,6 +12,7 @@ const Home = () => {
     <>
       <div className='position-relative overflow-hidden'>
         <div className='col-md-5 p-lg-5 mx-auto my-5'>
+          <img className='img-fluid rounded float-left' alt='girl shopping from his cellphone.' src='./src/assets/StuckatHomeShopping.png' />
           <h1 className='display-4 font-weight-normal'>KlickMarket</h1>
           <p>Your new <span>favorite</span> online store.</p>
         </div>
