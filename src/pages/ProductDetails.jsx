@@ -20,7 +20,10 @@ const ProductDetails = () => {
             <img alt={`${product.product_name} image.`} src={product?.image} />
           </div>
           <div className='col-md-8'>
-            <p className='text-secondary'>Description: {product.description}</p>
+            <h5>Description:</h5>
+            <p className='text-secondary'>{product.description}</p>
+            <h6>Category: {product.category}</h6>
+            <h5>$ {product.price}.00</h5>
             <a href='#' className='btn btn-outline-primary'> + Add to cart</a>
           </div>
         </div>
