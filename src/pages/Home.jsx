@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react' // Importarlos para poder utilizarlos para llamar a la API
 import { Link } from 'react-router-dom'
+
 const Home = () => {
   const [products, setProducts] = useState([]) // Donde se va almacenar los datos de la API
   useEffect(() => { // Llamada a la API
