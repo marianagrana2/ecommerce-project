@@ -3,9 +3,8 @@ $navbarBtnColor: #1D3557;
 @mixin navbaritemLink{
     color: $navbarColor;
     text-decoration: none;
-    letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
-    padding: 5px 30px;
+    padding: 4px 20px;
     margin-left: 10px;
     margin-top: 8px;
     margin-bottom: 12px;
@@ -13,11 +12,11 @@ $navbarBtnColor: #1D3557;
    
 }
 .navbar{
-    background-color: #CFDFF5;
+    background-color: #DCE5F7;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.45rem;
     margin-bottom: 20px;
     
     &__logo{
@@ -42,8 +41,15 @@ $navbarBtnColor: #1D3557;
         
     }
     .navbar-toggler{
-        margin-right: 2rem;
+        margin-right: 1.4rem;
 
+    }
+    .btn{
+        padding-left: 1.2rem;
+        margin-left:1.5rem;
+    }
+    .btn .badge{
+        margin-left: 1.2rem;
     }
 }
 
@@ -51,13 +57,14 @@ $navbarBtnColor: #1D3557;
     display: inline-block;
     width: auto;
     vertical-align: middle;
-    padding: 0.375rem 0.75rem;
+    padding: 0.375rem 0.65rem;
     font-size: 1rem;
     font-weight: lighter;
     
     .form-control{
         margin-left: 25px;
         padding-left: 20px;
-        padding-right: 50px;
+        padding-right: 40px;
     }
+
 }

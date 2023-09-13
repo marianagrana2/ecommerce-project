@@ -17,7 +17,11 @@ const ProductDetails = () => {
         </div>
         <div className='card-body'>
           <div className='row'>
-            <img alt={`${product.product_name} image.`} src={product?.image} />
+            <img
+              className='card-img-top img-thumbnail'
+              alt={`${product.product_name} image.`}
+              src={product?.image}
+            />
           </div>
           <div className='col-md-8'>
             <h5>Description:</h5>
@@ -25,7 +29,7 @@ const ProductDetails = () => {
             <h6>Category: {product.category} </h6>
             <h6>Brand: {product.brand} </h6>
             <h5>$ {product.price}.00</h5>
-            <a href='#' className='btn btn-outline-primary'> + Add to cart</a>
+            <a href='/' className='btn btn-outline-primary'> Back </a>
           </div>
         </div>
       </div>
